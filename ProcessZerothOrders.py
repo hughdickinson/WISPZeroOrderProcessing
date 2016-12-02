@@ -245,5 +245,5 @@ if __name__ == "__main__" :
 
     # now combine zeroth order columns from grism-specific files into a unified file
     dataTuples = [ (workingDirectory, currentPar, validGrismsForObjectsDict[currentObject], currentObject, dryrun, verbose) for currentObject in validGrismsForObjectsDict.keys() ]
-    print ('dataTuples => {}'.format(dataTuples))
+    #print ('dataTuples => {}'.format(dataTuples))
     results = processorPool.map(processUnifiedSpectrumDat, dataTuples)
