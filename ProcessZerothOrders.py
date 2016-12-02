@@ -237,7 +237,7 @@ if __name__ == "__main__" :
         processorPool = multiprocessing.Pool(numcpu)
 
         # assemble data to pass to parallel instances
-        dataTuples = [(workingDirectory, currentPar, currentGrism, stampFilePath, zeroOrderRanges, dryrun, verbose) for stampFilePath in grismStampFitsFiles[0:20] ]
+        dataTuples = [(workingDirectory, currentPar, currentGrism, stampFilePath, zeroOrderRanges, dryrun, verbose) for stampFilePath in grismStampFitsFiles ]
         results = processorPool.map(processSingleStamp, dataTuples)
 
     # Construct a dictionary to register the grisms for which each object in the pointing has a stamp
