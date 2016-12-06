@@ -17,7 +17,7 @@ def generateValidGrismsForObjectsDict(workingDirectory, validGrisms) :
     return validGrismStampForObjectDict
 
 def processUnifiedSpectrumDat(dataTuple) :
-    workingDirectory, currentPar, validGrisms, currentObject, verbose, dryrun = dataTuple
+    workingDirectory, currentPar, validGrisms, currentObject, dryrun, verbose = dataTuple
     if len(validGrisms) > 0 :
         grismDatFilePaths = {currentGrism : '{0}/Spectra/Par{1}_G{2}_BEAM_{3}A.dat'.format(workingDirectory, currentPar, currentGrism, currentObject) for currentGrism in validGrisms }
 
