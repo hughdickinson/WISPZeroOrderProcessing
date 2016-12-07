@@ -48,11 +48,11 @@ def processUnifiedSpectrumDat(dataTuple) :
 
     # overwrite the input .dat file using the generated data
     if not dryrun :
-        outFile = open(datFilePath, 'w')
+        outFile = open(unifiedDatFilePath, 'w')
         outFile.write(datFileOutput)
         outFile.close()
         if verbose :
-            print('Updated unified .dat file written to {0}'.format(datFilePath))
+            print('Updated unified .dat file written to {0}'.format(unifiedDatFilePath))
         return 0
     else :
         print('Running in dryrun mode. No files were modified.')
