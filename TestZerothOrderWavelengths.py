@@ -40,7 +40,8 @@ if __name__ == "__main__" :
     datFileFrame = pd.read_csv(datFileInputPath, delim_whitespace=True, header=0, engine='c', names=columnNames, comment='#')
 
     # instantiate the class to compute the wavelength ranges affected by zeroth order images
-    zeroOrderRanges = ZerothOrderWavelengthRanges(stampPath, regionFilePath, cataloguePath)
+    zeroOrderRanges = ZerothOrderWavelengthRanges(regionFilePath, cataloguePath, printVerbose = True)
+    zeroOrderRanges.setDrizzledStampFilePath(stampPath)
     # update the dataframe column for the zeroth orders to reflect the computation
     datFileFrame['zeroth'] = zeroOrderRanges.getWavelengthZerothOrderFlags(datFileFrame['wave'].values)
 
