@@ -90,3 +90,4 @@ ENV/
 
 # Test data directories
 Par*/
+BuggyDats/*
